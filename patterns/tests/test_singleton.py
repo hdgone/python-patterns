@@ -1,12 +1,12 @@
 import pytest
 
-from patterns.decorators.singleton import singleton,\
+from patterns.decorators.singleton import Singleton as Singleton_dec,\
     AlreadyDefinedError as DecoratorException
 from patterns.meta.singleton import Singleton,\
     AlreadyDefinedError as MetaclassException
 
 
-@singleton
+@Singleton_dec
 class Boss:
     def __init__(self, name):
         self.name = name
